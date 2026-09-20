@@ -1,0 +1,67 @@
+/*
+ * Sistema de diseño de PoyeriaOpti
+ * ---------------------------------------
+ * Idea: "signos vitales". Superficies de pizarra azul-verdosa, UN solo acento
+ * cobalto para lo interactivo, y verde/ámbar/rojo reservados exclusivamente
+ * para estados de salud. La personalidad sale de la tipografía (una sola
+ * familia con eje de ancho: cifras condensadas enormes, texto normal) y de la
+ * gráfica en vivo del Resumen, no de la decoración.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Superficies */
+  --bg: #0d151a;
+  --surface: #121c22;
+  --surface-2: #182630;
+  --surface-3: #22333e;
+  --line: #22343f;
+  --line-strong: #345060;
+
+  /* Texto */
+  --text: #e9f0f2;
+  --text-2: #a5b8c1;
+  --text-3: #7d939e;
+
+  /* Acento (lo interactivo) */
+  --accent: #79a0ff;
+  --accent-solid: #3b69ec;
+  --accent-soft: rgba(121, 160, 255, 0.14);
+  --on-accent: #ffffff;
+
+  /* Estados de salud (nunca decorativos) */
+  --ok: #52d68c;
+  --warn: #f1b64a;
+  --danger: #ff7a70;
+
+  /* Tipografía */
+  --font: "Bricolage Grotesque Variable", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+
+  /* Radios jerárquicos: controles < paneles < píldoras */
+  --r-control: 7px;
+  --r-panel: 14px;
+  --r-pill: 999px;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #eef2f5;
+  --surface: #ffffff;
+  --surface-2: #f2f6f8;
+  --surface-3: #e3eaef;
+  --line: #dbe3e9;
+  --line-strong: #bccad3;
+
+  --text: #0f1b22;
+  --text-2: #465b67;
+  --text-3: #5d727d;
+
+  --accent: #2c58dc;
+  --accent-solid: #2c58dc;
+  --accent-soft: rgba(44, 88, 220, 0.1);
+
+  --ok: #12804a;
+  --warn: #9a6200;
+  --danger: #c4302b;
+}

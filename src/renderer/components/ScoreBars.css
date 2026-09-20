@@ -1,0 +1,27 @@
+.score-bars {
+  display: flex;
+  gap: 3px;
+  height: 16px;
+  --tone: var(--text-3);
+}
+
+.score-bars--good {
+  --tone: var(--ok);
+}
+.score-bars--tight {
+  --tone: var(--warn);
+}
+.score-bars--bad {
+  --tone: var(--danger);
+}
+
+.score-bars__tick {
+  flex: 1;
+  border-radius: 2px;
+  background: var(--surface-3);
+  transition: background-color 300ms ease;
+}
+
+.score-bars__tick--on {
+  background: var(--tone);
+}

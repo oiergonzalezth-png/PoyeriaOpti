@@ -1,0 +1,70 @@
+.titlebar {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  min-height: 38px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  /* Electron drag region */
+  -webkit-app-region: drag;
+  user-select: none;
+  padding: 0 4px 0 14px;
+  flex-shrink: 0;
+}
+
+.titlebar__drag {
+  -webkit-app-region: drag;
+  height: 100%;
+  min-width: 8px;
+}
+
+.titlebar__drag--fill {
+  flex: 1;
+}
+
+.titlebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  -webkit-app-region: drag;
+}
+
+.titlebar__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  letter-spacing: -0.01em;
+  -webkit-app-region: drag;
+}
+
+.titlebar__controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  -webkit-app-region: no-drag;
+  margin-left: 8px;
+}
+
+.titlebar__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  color: var(--text-3);
+  border-radius: 6px;
+  transition: background 100ms ease, color 100ms ease;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar__btn:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.titlebar__btn--close:hover {
+  background: #e81123;
+  color: #ffffff;
+}

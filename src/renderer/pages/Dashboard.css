@@ -1,0 +1,173 @@
+/* Hero: la puntuación (cifra condensada enorme) + el trazo en vivo */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(270px, 320px) minmax(0, 1fr);
+  border: 1px solid var(--line);
+  border-radius: var(--r-panel);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.hero__score {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 30px 32px 28px;
+  border-right: 1px solid var(--line);
+}
+
+.hero__num {
+  font-size: 138px;
+  font-weight: 780;
+  font-stretch: 75%;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  margin: 6px 0 4px -4px;
+}
+
+.hero__verdict {
+  font-size: 22px;
+  font-weight: 620;
+  font-stretch: 90%;
+  letter-spacing: -0.012em;
+  line-height: 1.2;
+}
+
+.hero__caption {
+  color: var(--text-3);
+  font-size: 13px;
+}
+
+.hero__trace {
+  padding: 24px 26px 18px 28px;
+  min-width: 0;
+}
+
+.hero__trace .section__title {
+  margin-bottom: 12px;
+}
+
+/* Recursos + siguientes pasos */
+.dash-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 56px;
+  margin-top: 44px;
+}
+
+.dash-grid .section__title {
+  margin-bottom: 12px;
+}
+
+.res-list,
+.todo-list,
+.top-list {
+  border-top: 1px solid var(--line);
+}
+
+.res {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) 52px;
+  align-items: center;
+  column-gap: 16px;
+  row-gap: 4px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.res__label {
+  color: var(--text-2);
+  font-weight: 540;
+}
+
+.res__value {
+  text-align: right;
+  font-size: 17px;
+  font-weight: 680;
+  font-stretch: 88%;
+}
+
+.res__detail {
+  grid-column: 2 / 4;
+  color: var(--text-3);
+  font-size: 12.5px;
+  min-height: 18px;
+}
+
+.todo {
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.todo--good {
+  grid-template-columns: 18px minmax(0, 1fr);
+  color: var(--ok);
+}
+
+.todo--good p {
+  color: var(--text-2);
+}
+
+.todo__title {
+  font-weight: 620;
+}
+
+.todo__desc {
+  margin-top: 2px;
+  color: var(--text-2);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Lo que más memoria usa */
+.top {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 84px;
+  align-items: center;
+  column-gap: 20px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.top__name {
+  font-weight: 540;
+}
+
+.top__value {
+  text-align: right;
+  color: var(--text-2);
+  font-weight: 560;
+}
+
+@media (max-width: 1180px) {
+  .hero {
+    grid-template-columns: minmax(230px, 260px) minmax(0, 1fr);
+  }
+  .hero__score {
+    padding: 26px 24px;
+  }
+  .hero__num {
+    font-size: 116px;
+  }
+  .dash-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .top {
+    grid-template-columns: 160px minmax(0, 1fr) 80px;
+  }
+}
+
+@media (max-width: 940px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero__score {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
